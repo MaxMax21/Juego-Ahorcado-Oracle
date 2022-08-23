@@ -1,25 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge Alura 02</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="container">
-        <header>
+        <header class="header">
             <img src="img/logo.png">
         </header>
-        <main>
-            <div>
-                <button>Iniciar juego</button>
-            </div>
-            <div>
-                <button>Agregar nueva palabra</button>
-            </div>
+        <main class="main">
+            <section class="section-start" style="display: none;">
+                <div>
+                    <button class="btn-start">Iniciar juego</button>
+                </div>
+                <div>
+                    <button class="btn-new-word">Agregar nueva palabra</button>
+                </div>
+            </section>
+            <section class="section-new-word" style="display: none;">
+                <div style="width: 100%;">
+                    <input type="text" placeholder="Ingrese una palabra" class="input-text">
+                </div>
+                <div style="width: 100%">
+                    <div class="warning-message">
+                        <img src="img/icon-warning.png" alt="">
+                        <p>
+                            Máx. de 8 letras
+                        </p>
+                    </div>
+                    <div style="width: 100%; display: flex; gap: 24px;">
+                        <button class="save">
+                            Guardar y empezar
+                        </button>
+                        <button class="cancel">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="section-game">
+                <div>
+                    <img src="img/Rectangle.png" alt="">
+                </div>
+                <div class="section-words">
+                    <div class="words-up">
+                        <p class="up">A</p>
+                        <p class="up">L</p>
+                        <p class="up">U</p>
+                        <p class="up">R</p>
+                        <p class="up">A</p>
+                    </div>
+                    <div class="words-down">
+                        <p class="down">A</p>
+                        <p class="down">B</p>
+                        <p class="down">C</p>
+                        <p class="down">D</p>
+                        <p class="down">E</p>
+                        <p class="down">B</p>
+                        <p class="down">C</p>
+                        <p class="down">D</p>
+                        <p class="down">E</p>
+                    </div>
+                </div>
+                <div style="display: flex; width: 100%; gap: 24px;">
+                    <button class="new-game">
+                        Nuevo Juego
+                    </button>
+                    <button class="back">
+                        Volver
+                    </button>
+                </div>
+            </section>
         </main>
     </div>
 </body>
+
 </html>
