@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge Alura 02</title>
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 
 <body>
@@ -15,15 +16,15 @@
             <img src="img/logo.png">
         </header>
         <main class="main">
-            <section class="section-start" style="display: none;">
+            <section class="section-start">
                 <div>
-                    <button class="btn-start">Iniciar juego</button>
+                    <button class="btn-start" id="btn-start">Iniciar juego</button>
                 </div>
                 <div>
-                    <button class="btn-new-word">Agregar nueva palabra</button>
+                    <button class="btn-new-word" id="btn-new-word">Agregar nueva palabra</button>
                 </div>
             </section>
-            <section class="section-new-word" style="display: none;">
+            <section class="section-new-word">
                 <div style="width: 100%;">
                     <input type="text" placeholder="Ingrese una palabra" class="input-text">
                 </div>
@@ -35,10 +36,10 @@
                         </p>
                     </div>
                     <div style="width: 100%; display: flex; gap: 24px;">
-                        <button class="save">
+                        <button class="save" id="btn-save">
                             Guardar y empezar
                         </button>
-                        <button class="cancel">
+                        <button class="cancel" id="btn-cancel">
                             Cancelar
                         </button>
                     </div>
@@ -46,39 +47,28 @@
             </section>
             <section class="section-game">
                 <div>
-                    <img src="img/Rectangle.png" alt="">
+                    <img src="img/1.png" alt="">
                 </div>
                 <div class="section-words">
-                    <div class="words-up">
-                        <p class="up">A</p>
-                        <p class="up">L</p>
-                        <p class="up">U</p>
-                        <p class="up">R</p>
-                        <p class="up">A</p>
+                    <div class="words-up" id="test">
+                        <p class="up"></p>
                     </div>
                     <div class="words-down">
-                        <p class="down">A</p>
-                        <p class="down">B</p>
-                        <p class="down">C</p>
-                        <p class="down">D</p>
-                        <p class="down">E</p>
-                        <p class="down">B</p>
-                        <p class="down">C</p>
-                        <p class="down">D</p>
-                        <p class="down">E</p>
+                        <p class="down"></p>
                     </div>
                 </div>
                 <div style="display: flex; width: 100%; gap: 24px;">
-                    <button class="new-game">
+                    <button class="new-game" id="btn-new-game">
                         Nuevo Juego
                     </button>
-                    <button class="back">
+                    <button class="back" id="btn-back">
                         Volver
                     </button>
                 </div>
             </section>
         </main>
     </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
