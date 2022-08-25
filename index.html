@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge Alura 02</title>
     <link rel="stylesheet" href="css/style.css">
-    
+
 </head>
 
 <body>
@@ -47,18 +47,16 @@
             </section>
             <section class="section-game">
                 <div>
-                    <img src="img/1.png" alt="">
+                    <img src="img/base.png" alt="" id="img-game">
                 </div>
                 <div class="section-words">
-                    <div class="words-up" id="test">
-                        <p class="up"></p>
+                    <div class="words-up" id="words-up">
                     </div>
-                    <div class="words-down">
-                        <p class="down"></p>
+                    <div class="words-down" id="words-down">
                     </div>
                 </div>
                 <div style="display: flex; width: 100%; gap: 24px;">
-                    <button class="new-game" id="btn-new-game">
+                    <button class="new-game" id="btn-new-game" onclick="newGame()">
                         Nuevo Juego
                     </button>
                     <button class="back" id="btn-back">

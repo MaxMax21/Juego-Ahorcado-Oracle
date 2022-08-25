@@ -149,9 +149,9 @@ body {
     background: #0A3871;
     color: #FFFFFF;
 }
-
+ /* SECTION GAME */
 .section-game {
-    display: none;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -173,9 +173,10 @@ body {
 .words-down{
     gap: 1rem;
     display: flex;   
-    justify-content: space-evenly; 
+    justify-content: center; 
 }
 .up {
+    width: 30px;
     height: 92px;
     font-weight: 400;
     font-size: 48px;
