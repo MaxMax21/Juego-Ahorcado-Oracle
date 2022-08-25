@@ -22,7 +22,6 @@ function newGame() {
   clean();
   word = array_words[Math.floor(Math.random() * array_words.length)];
   separate_word = word.toString().split('');
-  console.log(separate_word)
   let div_up = document.getElementById('words-up');
   div_up.innerHTML = '';
   for (let i = 0; i < separate_word.length; i++) {
@@ -61,7 +60,6 @@ function writeLetter(key) {
 }
 function incorrectLetter() {
   if (separate_word.includes(letter) == false && count_error < 6) {
-    console.log("entre")
     let incorrect_letter = document.createElement('div');
     incorrect_letter.classList.add('down');
     div_down.appendChild(incorrect_letter);
