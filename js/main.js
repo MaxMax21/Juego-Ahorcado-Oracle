@@ -15,7 +15,8 @@ function clean() {
   div_down.innerHTML = '';
   count_error = 0;
   img.setAttribute('src', 'img/base.png');
-  check_word.length = 0;
+  check_word = [];
+  pressed_letter = [];
 }
 function newGame() {
   clean();
@@ -38,7 +39,6 @@ document.addEventListener('keydown', function (e) {
     letter = String.fromCharCode(captured_letter);
 
     writeLetter(letter);
-    incorrectLetter();
     validatePoint();
   }
 })
@@ -46,7 +46,8 @@ document.addEventListener('keydown', function (e) {
 function writeLetter(key) {
   if (pressed_letter.includes(key)) {
     alert("Ya pulsate esta tecla")
-  }else{
+  } else {
+    incorrectLetter();
     pressed_letter.push(key);
     if (alphabet.indexOf(key) != -1 && count_error < 6) {
       for (let i = 0; i < separate_word.length; i++) {
@@ -55,13 +56,12 @@ function writeLetter(key) {
           check_word.push(key)
         }
       }
-      console.log(check_word);
-      console.log(pressed_letter);
     }
   }
 }
 function incorrectLetter() {
   if (separate_word.includes(letter) == false && count_error < 6) {
+    console.log("entre")
     let incorrect_letter = document.createElement('div');
     incorrect_letter.classList.add('down');
     div_down.appendChild(incorrect_letter);
